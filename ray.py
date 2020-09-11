@@ -1,7 +1,7 @@
 from utils import writebmp, norm, V3, sub, dot, reflect, length, mul, sum
 from sphere import Sphere
 from math import pi, tan
-from materials import lightblue, body, eye, nose, button
+from materials import eye, oso1, oso2, tono2, adorno1, adorno2, mona1, mona2, tono3
 import random
 from light import *
 from color import *
@@ -16,7 +16,7 @@ from color import *
 
 BLACK = Color(0, 0, 0)
 WHITE = Color(255, 255, 255)
-BLUE = Color(60, 80, 125)
+BACKGROUND = Color(240, 240, 240)
 
 
 class Raytracer(object):
@@ -24,7 +24,7 @@ class Raytracer(object):
         self.width = width
         self.height = height
         self.scene = []
-        self.currentColor = BLUE
+        self.currentColor = BACKGROUND
         self.clear()
 
     def clear(self):
@@ -107,26 +107,20 @@ class Raytracer(object):
 
 r = Raytracer(1000, 1000)
 r.light = Light(
-    position = V3(-20, 20, 20),
+    position = V3(10, 20, 20),
     intensity = 1.5
 )
 r.scene = [
-    Sphere(V3(0.7, -5.05, -15), 0.15, button),
-    Sphere(V3(-0.8, -5.05, -15), 0.15, button),
-    Sphere(V3(0.75, -5, -15), 0.3, eye),
-    Sphere(V3(-0.75, -5, -15), 0.3, eye),
-    Sphere(V3(0, -4.5, -15), 0.4, nose),
-    Sphere(V3(-1, -4, -15), 0.2, button),
-    Sphere(V3(-0.4, -3.5, -15), 0.2, button),
-    Sphere(V3(0.4, -3.5, -15), 0.2, button),
-    Sphere(V3(1, -4, -15), 0.2, button),
-    Sphere(V3(0, -2, -15), 0.25, button),
-    Sphere(V3(0, 0.25, -15), 0.5, button),
-    Sphere(V3(0, 3, -15), 0.75, button),
-    Sphere(V3(0, -3.5, -12), 1.5, body),
-    Sphere(V3(0, -1, -12), 2, body),
-    Sphere(V3(0, 2.5, -12), 2.5, body),
-    Sphere(V3(0, 0, -11), 5, lightblue),
+    Sphere(V3(0, -3, -10), 2, adorno2),
+    Sphere(V3(0, 3, -10), 2, adorno1),
+    Sphere(V3(0, -4.5, -10), 0.4, tono2),
+    Sphere(V3(-1, -4, -10), 0.2, eye),
+    Sphere(V3(0, -2, -10), 0.25, mona2),
+    Sphere(V3(0, 0.25, -10), 0.5, mona1),
+    Sphere(V3(0, 3, -10), 0.75, oso2),
+    Sphere(V3(3, 3, -10), 0.75, tono3),
+    Sphere(V3(0, -3.5, -12), 1.5, oso1),
 ]
 r.render()
+
 r.write()

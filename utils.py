@@ -8,7 +8,6 @@
 
 from collections import namedtuple
 import struct
-from color import *
 
 V2 = namedtuple('Vertex2', ['x', 'y'])
 V3 = namedtuple('Vertex3', ['x', 'y', 'z'])
