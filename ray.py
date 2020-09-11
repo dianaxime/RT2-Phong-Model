@@ -111,15 +111,18 @@ r.light = Light(
     intensity = 1.5
 )
 r.scene = [
-    Sphere(V3(0, -3, -10), 2, adorno2),
-    Sphere(V3(0, 3, -10), 2, adorno1),
-    Sphere(V3(0, -4.5, -10), 0.4, tono2),
-    Sphere(V3(-1, -4, -10), 0.2, eye),
-    Sphere(V3(0, -2, -10), 0.25, mona2),
-    Sphere(V3(0, 0.25, -10), 0.5, mona1),
-    Sphere(V3(0, 3, -10), 0.75, oso2),
-    Sphere(V3(3, 3, -10), 0.75, tono3),
-    Sphere(V3(0, -3.5, -12), 1.5, oso1),
+    Sphere(V3(2.5, -1, -10), 1.75, adorno2),
+    Sphere(V3(-2.5, -1, -10), 1.75, adorno1),
+    Sphere(V3(2.5, 2, -10), 1.5, oso2),
+    Sphere(V3(-2.5, 2, -10), 1.5, oso1),
+    Sphere(V3(3.4, 0.6, -9), 0.5, oso2),
+    Sphere(V3(-3.4, 0.6, -9), 0.5, oso1),
+    Sphere(V3(1.6, 0.6, -9), 0.5, oso2),
+    Sphere(V3(-1.6, 0.6, -9), 0.5, oso1),
+    Sphere(V3(3.4, -2.7, -9), 0.6, oso2),
+    Sphere(V3(-3.4, -2.7, -9), 0.6, oso1),
+    Sphere(V3(1.6, -2.7, -9), 0.6, oso2),
+    Sphere(V3(-1.6, -2.7, -9), 0.6, oso1),
 ]
 r.render()
 
