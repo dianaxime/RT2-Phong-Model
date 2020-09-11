@@ -107,7 +107,7 @@ class Raytracer(object):
 
 r = Raytracer(1000, 1000)
 r.light = Light(
-    position = V3(10, 20, 20),
+    position = V3(0, 0, 20),
     intensity = 1.5
 )
 r.scene = [
@@ -115,14 +115,20 @@ r.scene = [
     Sphere(V3(-2.5, -1, -10), 1.75, adorno1),
     Sphere(V3(2.5, 2, -10), 1.5, oso2),
     Sphere(V3(-2.5, 2, -10), 1.5, oso1),
-    Sphere(V3(3.4, 0.6, -9), 0.5, oso2),
-    Sphere(V3(-3.4, 0.6, -9), 0.5, oso1),
-    Sphere(V3(1.6, 0.6, -9), 0.5, oso2),
-    Sphere(V3(-1.6, 0.6, -9), 0.5, oso1),
-    Sphere(V3(3.4, -2.7, -9), 0.6, oso2),
-    Sphere(V3(-3.4, -2.7, -9), 0.6, oso1),
-    Sphere(V3(1.6, -2.7, -9), 0.6, oso2),
-    Sphere(V3(-1.6, -2.7, -9), 0.6, oso1),
+    Sphere(V3(2.5, 1.70, -9), 0.65, tono2),
+    Sphere(V3(-2.5, 1.70, -9), 0.65, oso1),
+    Sphere(V3(3.6, 0.35, -9), 0.6, oso2),
+    Sphere(V3(-3.6, 0.35, -9), 0.6, oso1),
+    Sphere(V3(1.4, 0.35, -9), 0.6, oso2),
+    Sphere(V3(-1.4, 0.35, -9), 0.6, oso1),
+    Sphere(V3(3.6, -2.5, -9), 0.75, oso2),
+    Sphere(V3(-3.6, -2.5, -9), 0.75, oso1),
+    Sphere(V3(1.4, -2.5, -9), 0.75, oso2),
+    Sphere(V3(-1.4, -2.5, -9), 0.75, oso1),
+    Sphere(V3(3.4, 2.9, -9), 0.5, tono3),
+    Sphere(V3(-3.4, 2.9, -9), 0.5, oso1),
+    Sphere(V3(1.5, 2.9, -9), 0.5, tono3),
+    Sphere(V3(-1.5, 2.9, -9), 0.5, oso1),
 ]
 r.render()
 
