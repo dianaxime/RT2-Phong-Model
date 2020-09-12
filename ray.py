@@ -115,8 +115,8 @@ r.scene = [
     Sphere(V3(-2.5, -1, -10), 1.75, adorno1),
     Sphere(V3(2.5, 2, -10), 1.5, oso2),
     Sphere(V3(-2.5, 2, -10), 1.5, oso1),
-    Sphere(V3(2.5, 1.70, -9), 0.65, tono2),
-    Sphere(V3(-2.5, 1.70, -9), 0.65, oso1),
+    Sphere(V3(2.5, 1.7, -9), 0.65, tono2),
+    Sphere(V3(-2.5, 1.7, -9), 0.65, oso1),
     Sphere(V3(4, 0, -10), 0.6, oso2),
     Sphere(V3(-4, 0, -10), 0.6, oso1),
     Sphere(V3(1, 0, -10), 0.6, oso2),
@@ -133,6 +133,12 @@ r.scene = [
     Sphere(V3(2.1, 0.2, -8.6), 0.2, mona2),
     Sphere(V3(-2.4, 0.2, -8.6), 0.2, mona1),
     Sphere(V3(-2.1, 0.2, -8.6), 0.2, mona1),
+    Sphere(V3(-2.5, 1.7, -8), 0.1, eye),
+    Sphere(V3(2.5, 1.7, -8), 0.1, eye),
+    Sphere(V3(-2.6, 2.1, -8), 0.1, eye),
+    Sphere(V3(-2.2, 2.1, -8), 0.1, eye),
+    Sphere(V3(2.6, 2.1, -8), 0.1, eye),
+    Sphere(V3(2.2, 2.1, -8), 0.1, eye),
 ]
 r.render()
 
